@@ -52,21 +52,30 @@ Publish/Subscribe oferecem essas formas de desacoplamento?
     comunicarem. Se o servidor estiver fora do ar, os clientes podem continuar produzindo mensagens e colocando-as na fila. 
     Quando o servidor voltar a funcionar, ele irá processar essas mensagens.**
     
-    ****
+    **Arquiteturas baseadas em filas de mensagens e arquiteturas Publish/Subscribe oferecem essas formas de desacoplamento
+    pois suas estruturas configuram uma característica assincrona aos sistemas, onde uma "ponta" do sistema não precisa se
+    comunicar diretamente com outra.**
 
 8. Quando uma empresa deve considerar o uso de uma arquitetura baseada em filas
-de mensagens ou uma arquitetura publish/subscribe?
+de mensagens ou uma arquitetura publish/subscribe
+  **R:**
+  **Quando existem serviços frequentemente utilizados e a característica assincrona não é um problema e também quando se necessita
+  facilitar o escalonamento de sistemas distribuídos.**
+
 9. Explique o objetivo do conceito de tópicos em uma arquitetura publish/subscribe.
-10. (POSCOMP, 2019, adaptado) Marque V ou F.
-( ) O padrão MVC é uma adaptação do padrão arquitetural Camadas. A Camada
+  **R:**
+  **Usar uma fila de mensagens dedicadas para cada "cliente" não é algo bom quando há vários "clientes". 
+  Além disso, talvez alguns "clientes" tenham interesse em apenas um subconjunto das informações, daí o uso de tópicos.**
+
+10. (POSCOMP, 2019, adaptado) Marque V ou F.  
+(**V**) O padrão MVC é uma adaptação do padrão arquitetural Camadas. A Camada
 Visão lida com a apresentação e a manipulação da interface, a Camada Modelo
 organiza os objetos específicos da aplicação, e a Camada Controle posiciona-se
-entre estas duas com as regras do negócio.
-
-( ) O padrão Broker é voltado a problemas de ambientes distribuídos. Sugere uma
+entre estas duas com as regras do negócio.  
+(**V**) O padrão Broker é voltado a problemas de ambientes distribuídos. Sugere uma
 arquitetura na qual um componente (broker) estabelece uma mediação que permite
-um desacoplamento entre clientes e servidores.
-( ) Mesmo que um dado padrão arquitetural ofereça uma solução para o problema
+um desacoplamento entre clientes e servidores.  
+(**V**) Mesmo que um dado padrão arquitetural ofereça uma solução para o problema
 sendo resolvido, nem sempre ele é adequado. Fatores como contexto e o sistema de
 forças que afeta a solução fazem também parte do processo de avaliação e da
 escolha de padrões adequados.
